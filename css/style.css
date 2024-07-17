@@ -1,0 +1,371 @@
+/* reset css */
+*, ::before, ::after {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* import font */
+@font-face {
+    font-family: Gustavo-Bold;
+    src: url(../asset/font/Gustavo-Bold.woff2);
+    font-display: swap;
+}
+@font-face {
+    font-family: Gustavo-Regular;
+    src: url(../asset/font/Gustavo-Regular.woff2);
+    font-display: swap;
+}
+
+/* design system */
+h1, h2, h5, h6 {
+    font-family: Gustavo-Bold;
+    font-size: clamp(0.875rem, 0.0625rem + 3.3333vw, 2rem);
+    letter-spacing: 2px;
+    line-height: clamp(0.9375rem, 0.2604rem + 2.7778vw, 1.875rem);
+}
+h3{
+    font-family: Gustavo-Regular;
+    font-size: 18px;
+    line-height: 16px;
+    letter-spacing: 1px;
+}
+h4 {
+    font-family: Gustavo-Bold;
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 14px;
+    text-align: center;
+}
+p, span, li{
+    font-family: Gustavo-Regular;
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: 1px;
+    text-wrap: balance;
+}
+ul {
+    padding-left: 8px;
+    list-style: none;
+}
+li {
+    padding: 0 0 8px 16px;
+}
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background-color: #181617;
+    padding: 8px 26px;
+    border-radius: 50px;
+    font-family: Gustavo-Regular;
+    font-size: 16px;
+    letter-spacing: 2px;
+    line-height: 22px;
+}
+button img {
+    width: 17px;
+}
+.btn-space button img {
+    filter: invert(1);
+}
+.btn-back {
+    padding-bottom: 20px;
+    opacity:0;
+    transform: translateY(-30px);
+    animation: aparition 0.6s 0.6s ease-out forwards;
+    display: flex;
+    justify-content: space-between;
+}
+.btn-back button{
+    background-color: #fff;
+    color: #181617;
+}
+.btn-back button span {
+    font-size: 16px;
+    padding-bottom: 3px;
+    padding-left: 9px;
+}
+.txt-space .btn-space button span {
+    font-size: 16px;
+    padding-bottom: 3px;
+    padding-right: 9px;
+}
+/* Button-icone invitant l'interaction avec la main */
+#touchIco {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    border-radius: 200px;
+    background-color: #181617;
+    color: #fff;
+    text-align: center;
+    top: 36vw;
+    left: 20vw;
+    opacity:0;
+    transform: translateY(-30px);
+    animation: aparition 0.6s 0.3s ease-out forwards, xpanse-border 2s ease-out infinite;
+}
+#touchIco img{
+    filter: invert(1);
+}
+/* design body */
+html{
+    height: 100svh;
+    padding: 12px;
+}
+body{
+    background-color: #fff;
+}
+footer {
+    display: none;
+}
+#logo {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    background-color: #F3EEE4;
+}
+#logo img {
+    width: 25%;
+    height: auto;
+    z-index: 1;
+}
+#logo::before {
+    content: "";
+    width: 39vw;
+    height: 39vw;
+    display: block;
+    background-color: #fff;
+    border-radius: 39vw;
+    position: absolute;
+    top: -16vw;
+    z-index: 0;
+}
+
+#container-1 {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    background-color: #F3EEE4;
+}
+
+img {
+    max-width: 100%;
+}
+svg {
+    width: 100%; /* Responsive width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove extra space below */
+    padding: 16px;
+    /*border: 1px solid #ccc;  Optional border for visibility */
+}
+#background-image1, #background-image2 {
+    transition: opacity 1s ease;
+}
+
+/* css pour visualiser les polygones dans l'image */
+polygon {
+    fill: transparent;
+    /*stroke: red;*/
+    /*stroke-width: 2px;*/
+}
+/*polygon:hover {
+    fill: yellow;
+}*/
+
+#container-2 {
+    display: flex;
+    align-items: center;
+    background-color: #F3EEE4;
+    height: 53.5vh;
+    border-top: 5px dotted #fff;
+    overflow: hidden;
+}
+
+#container-2 article {
+    width: 100%;
+    height:auto;
+    display: none;
+    padding:  32px 78px;
+    margin-top: -80px;
+}
+
+#container-2 #main {
+    height: 100%;
+    display: block;
+    align-content: center;
+    translate: 0 -80px;
+    text-align: center;
+    opacity:0;
+    transform: translateY(-30px);
+    animation: aparition 0.6s 0.3s ease-out forwards;
+}
+#main::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    left: -150px;
+    bottom: -390px;
+    filter: invert(0) hue-rotate(183deg);
+    background: url(../asset/svg/LE_ROUF_embleme_white.svg) no-repeat bottom left;
+}
+#main h2 {
+    padding-bottom: 10px;
+}
+#main span {
+    line-height: 48px;
+}
+#main p {
+    padding: 16px 0 16px;
+}
+#main button{
+    margin: 30px auto 0;
+}
+/* debug espace */
+/*#jardin {
+    background-color: #aaaa71;
+}
+
+#cabinet {
+    background-color: #81aaa7;
+}
+
+#cuisine {
+    background-color: #b2685b;
+}
+
+#cave {
+    background-color: #e8ab74;
+}
+
+#suite {
+    background-color: #979b84;
+}
+
+#salle {
+    background-color: #b59e9c;
+}
+
+#patio, #salon {
+    background-color: #966B57;
+}*/
+
+/* Design de la description des espaces */
+.descr {
+    width: 100%;
+    height: auto;
+    display: flex;
+    opacity:0;
+    transform: translateY(-30px);
+    animation: aparition 0.6s 0.3s ease-out forwards;
+}
+.img-space , .txt-space {
+    width: 50%;
+    height: auto;
+}
+.img-space > img:first-child{
+    margin-bottom: 16px;
+}
+.txt-space {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    row-gap: 16px;
+    padding: 0 0 0 54px;
+}
+.picto img {
+    width: 44px;
+    padding-right: 8px;
+}
+.btn-space > button:first-child {
+    margin-bottom: 10px;
+}
+
+/* exception de mise en page de description des espaces */
+#salle .txt-space h2 {
+    text-wrap: nowrap;
+}
+
+/* design des menus */
+#menu-jardin h2 , #menu-cabinet h2 , #menu-cuisine h2 , #menu-cave h2 , #menu-suite h2 , #menu-salle h2 , #menu-salon h2 , #menu-patio h2 , #menu-loggia h2 {
+    font-size: 20px;
+    line-height: 22px;
+    margin-bottom: 16px;
+}
+
+/* gestion de l'animantion d'entrée en css */
+@keyframes aparition {
+    0%{
+        opacity: 0;
+        filter: blur(5px);
+    }
+    100%{
+        opacity: 1;
+        transform: none;
+        filter: blur(0);
+    }
+}
+/* animation du bouton d'invitation a interagir avec la carte */
+@keyframes xpanse-border {
+    0%{
+        scale: 1;
+    }
+    50%{
+        scale: 1.1;
+    }
+    100%{
+        scale: 1;
+    }
+}
+
+/* Bg Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 15%;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    /*background-color: rgb(0,0,0); /* Fallback color */
+    /*background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding: 12px;
+    opacity:0;
+    transform: translateY(-30px);
+    animation: aparition 0.6s 0.3s ease-out forwards;
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #f3eee4;
+    padding: 20px;
+    width: 100%;
+  }
+  .modal-content iframe {
+    width: 100%;
+    height: 50vh;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #000;
+    font-size: 33px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }

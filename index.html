@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="asset/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="asset/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="asset/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="asset/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#333333">
+    <title>Plan Intercatif du Restaurant Le Rouf</title>
+    <meta name="description" content="Plan interactif pour les totems au rez-de-chaussée du Rouf.">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <img src="asset/img-webp/LE_ROUF_complet_NOIR.webp" alt="logo noir le rouf" width="226.5" height="157.05">
+        </div>
+    </header>
+    <main>
+        <section id="container-1">
+            <svg viewBox="0 0 800 600" preserveAspectRatio="xMinYMin meet">
+                <!-- Image originale -->
+                <image href="asset/img-webp/01-plan-global-V3.webp" width="800" height="600"/>
+                <!-- Image de transition -->
+                <image id="background-image2" href="" width="800" height="600" style="opacity: 0;"/>
+                <!-- Background image  -->
+                <image id="background-image1" href="asset/img-webp/01-plan-global-V3.webp" width="800" height="600"/>
+        
+                <!-- Interactive polygon area -->
+                <polygon points="110,460 285,388 408,445 245,508" onclick="showContent('jardin')"/>
+                <polygon points="60,510 60,560 180,560 180,510" onclick="showContent('jardin')"/>
+                <polygon points="405,438 405,375 480,345 555,375 555,440 478,465" onclick="showContent('cabinet')"/>
+                <polygon points="370,510 370,560 610,560 610,510" onclick="showContent('cabinet')"/>
+                <polygon points="495,345 495,315 620,280 730,320 730,370 615,415" onclick="showContent('cuisine')"/>
+                <polygon points="660,430 660,500 790,500 790,430" onclick="showContent('cuisine')"/>
+                <polygon points="595,270 708,208 799,240 799,285 720,316" onclick="showContent('cave')"/>
+                <polygon points="700,140 700,200 800,200 800,140" onclick="showContent('cave')"/>
+                <polygon points="511,262 511,219 640,168 680,183 680,225 557,280" onclick="showContent('suite')"/>
+                <polygon points="620,70 620,130 750,130 750,70" onclick="showContent('suite')"/>
+                <polygon points="400,168 400,130 480,100 585,138 585,180 510,210" onclick="showContent('salle')"/>
+                <polygon points="310,40 310,90 500,90 500,40" onclick="showContent('salle')"/>
+                <polygon points="130,285 130,225 360,140 427,165 427,220 195,310" onclick="showContent('salon')"/>
+                <polygon points="200,70 200,150 300,150 300,70" onclick="showContent('salon')"/>
+                <polygon points="1,368 1,290 115,250 242,290 242,363 115,410" onclick="showContent('loggia')"/>
+                <polygon points="30,140 30,200 130,200 130,140" onclick="showContent('loggia')"/>
+                <polygon points="200,335 350,275 355,250 455,230 478,332 342,388" onclick="showContent('bar')"/>
+            </svg>
+            <div id="touchIco">
+                <img src="asset/svg/one-finger-select-hand-gesture.svg" alt="icone de main interactive" width="38" height="38">
+                <span>Touchez la carte</span>
+            </div>
+        </section>
+        <!-- Zone des Modals de Réservation-->
+        <!-- Modal Jardin-->
+        <div id="jardinModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close" data-modal="jardinModal">&times;</span>
+                <iframe src="https://bookings.zenchef.com/results?rid=362800&pid=1001" title="Jardin Réservation" loading="lazy"></iframe>
+            </div>
+        </div>
+        <!-- Modal Cabinet-->
+        <div id="cabinetModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close" data-modal="cabinetModal">&times;</span>
+                <iframe src="https://bookings.zenchef.com/results?rid=362797&pid=1001" title="Cabinet réservation" loading="lazy"></iframe>
+            </div>
+        </div>
+        <!-- Modal Cuisine-->
+        <div id="cuisineModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close" data-modal="cuisineModal">&times;</span>
+                <iframe src="https://bookings.zenchef.com/results?rid=362794&pid=1001" title="Cuisine réservation" loading="lazy"></iframe>
+            </div>
+        </div>
+        <!-- Modal Cave-->
+        <div id="caveModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close" data-modal="caveModal">&times;</span>
+                <iframe src="https://bookings.zenchef.com/results?rid=362793&pid=1001" title="Cave réservation" loading="lazy"></iframe>
+            </div>
+        </div>
+        <!-- Modal Suite-->
+        <div id="suiteModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close" data-modal="suiteModal">&times;</span>
+                <iframe src="" title="suite réservation"></iframe>
+            </div>
+        </div>
+        <!-- Modal Salle-->
+        <div id="salleModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close" data-modal="salleModal">&times;</span>
+                <iframe src="https://bookings.zenchef.com/results?rid=362798&pid=1001" title="Salle réservation" loading="lazy"></iframe>
+            </div>
+        </div>
+        <!-- Modal Salon-->
+        <div id="salonModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close" data-modal="salonModal">&times;</span>
+                <iframe src="https://bookings.zenchef.com/results?rid=362799&pid=1001" title="Salon réservation" loading="lazy"></iframe>
+            </div>
+        </div>
+        <!-- Modal Loggia-->
+        <div id="loggiaModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close" data-modal="loggiaModal">&times;</span>
+                <iframe src="https://bookings.zenchef.com/results?rid=362799&pid=1001" title="Loggia réservation" loading="lazy"></iframe>
+            </div>
+        </div>
+        <!-- Modal Bar-->
+        <div id="barModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close" data-modal="barModal">&times;</span>
+                <iframe src="" title="Bar réservation"></iframe>
+            </div>
+        </div>
+        <section id="container-2">
+            <article id="main">
+                <h2>Découvrez et explorez le Rouf</h2>
+                <span>●</span>
+                <p>Situé au 3ème et dernier étage du 105, le Rouf est un lieu fort, rempli d'émotions et d'expériences culinaires différentes.</p>
+                <p>Imaginés comme un loft, les différents restaurants ont été conçus en adéquation avec les différentes pièces de vie d'un appartement dans lesquelles une gastronomie y sera adaptée.</p>
+                <p>Un univers hors du commun, insolite, qui encourage à la découverte, aux rencontres, à l’inattendu et au partage.</p>
+            </article>
+            <article id="jardin">
+                <div class="btn-back">
+                    <button onclick="showContent('main')"><img src="asset/svg/arrow-left.svg" alt="icone de fleches de retour" loading="lazy"><span>Retour</span></button>
+                </div>
+                <div class="descr">
+                    <div class="img-space">
+                        <img src="asset/img/plat-1/1.png" alt="" loading="lazy">
+                        <img src="asset/img/plat-2/2.png" alt="" loading="lazy">
+                    </div>
+                    <div class="txt-space">
+                        <h2>Le Jardin</h2>
+                        <h3>A griller, à volonté</h3>
+                        <div class="picto">
+                            <img src="asset/img-webp/pictogramme/euro1.webp" alt="gamme de prix de l'espace" loading="lazy">
+                            <img src="asset/img-webp/pictogramme/barbecue.webp" alt="icone d'un barbecue" loading="lazy">
+                            <img src="asset/img-webp/pictogramme/vegetal.webp" alt="icone végétal" loading="lazy">
+                            <img src="asset/img-webp/pictogramme/carotviande.webp" alt="icone de carotte et de viande" loading="lazy">
+                        </div>
+                        <p>Prenez place dans le Jardin où nous vous proposons un buffet à volonté de viandes, de légumes, de salé et de sucré. Votre barbecue coréen sur votre table ou votre hot pot n'attendent plus que vous pour votre expérience culinaire. Profitez d'une terrasse exposée plein sud toute la journée.</p>
+                        <div class="separateur-space"></div>
+                        <h4>Horaires et jours d’ouvertures</h4>
+                        <p style="text-align: center;">Le Cabinet de Curiosité est ouvert uniquement le soir du mardi au samedi avec un début d'expérience commun à tous à partir 20h.</p>
+                        <div class="btn-space">
+                            <button onclick="showMenu('menu-jardin')"><span>Découvrir la carte</span><img src="asset/svg/arrow-right.svg" alt="icone de fleches droite" loading="lazy"></button>
+                            <!-- Trigger/Open Modal -->
+                            <button id="jardinBtn">Réserver</button>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article id="cabinet">
+                <div class="btn-back">
+                    <button onclick="showContent('main')"><img src="asset/svg/arrow-left.svg" alt="icone de fleches de retour" loading="lazy"><span>Retour</span></button>
+                </div>
+                <div class="descr">
+                    <div class="img-space">
+                        <img src="asset/img-webp/cabinet/cabinet-1.webp" alt="" loading="lazy">
+                        <img src="asset/img-webp/cabinet/cabinet-2.webp" alt="" loading="lazy">
+                    </div>
+                    <div class="txt-space">
+                        <h2>Le Cabinet de curiosités</h2>
+                        <h3 style="text-wrap: nowrap;">L’expérience sensorielle et culinaire,<br>à la découverte des 4 éléments.</h3>
+                        <div class="picto">
+                            <img src="asset/img-webp/pictogramme/euro3.webp" alt="gamme de prix de l'espace" loading="lazy">
+                            <img src="asset/img-webp/pictogramme/interogation.webp" alt="icone d'interogation" loading="lazy">
+                            <img src="asset/img-webp/pictogramme/curieux.webp" alt="icone de curiosités" loading="lazy">
+                            <img src="asset/img-webp/pictogramme/plat-cloche.webp" alt="icone d'une cloche" loading="lazy">
+                        </div>
+                        <p style="text-wrap: nowrap;">Savourez des mets dans une ambiance scénarisée<br>autour de thèmes recherchés.<br>Le directeur du restaurant David<br>aura l’honneur de vous accueillir<br>pour vous proposer une expérience<br>des plus surprenantes.</p>
+                        <div class="separateur-space"></div>
+                        <h4>Horaires et jours d’ouvertures</h4>
+                        <p style="text-align: center;">Le Cabinet de Curiosité est ouvert uniquement le soir du mardi au samedi avec un début d'expérience commun à tous à partir 20h.</p>
+                        <div class="btn-space">
+                            <!--<button onclick="showMenu('menu-cabinet')"><span>Découvrir la carte</span><img src="asset/svg/arrow-right.svg" alt="icone de fleches droite"></button>-->
+                            <!-- Trigger/Open Modal -->
+                            <!--<button id="cabinetBtn">Réserver</button>-->
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article id="cuisine">
+                <div class="btn-back">
+                    <button onclick="showContent('main')"><img src="asset/svg/arrow-left.svg" alt="icone de fleches de retour" loading="lazy"><span>Retour</span></button>
+                </div>
+                <div class="descr">
+                    <div class="img-space">
+                        <img src="asset/img-webp/cuisine/cuisine-1.webp" alt="" loading="lazy">
+                        <img src="asset/img-webp/cuisine/cuisine-2.webp" alt="" loading="lazy">
+                    </div>
+                    <div class="txt-space">
+                        <h2>La Cuisine</h2>
+                        <h3>Saveurs d'antan,<br>comme chez mamie.</h3>
+                        <div class="picto">
+                            <img src="asset/img-webp/pictogramme/euro2.webp" alt="gamme de prix de l'espace" loading="lazy">
+                            <img src="asset/img-webp/pictogramme/cocote.webp" alt="icone de cocotte" loading="lazy">
+                            <img src="asset/img-webp/pictogramme/tarte.webp" alt="icone de tarte" loading="lazy">
+                            <img src="asset/img-webp/pictogramme/tablier.webp" alt="icone de tablier" loading="lazy">
+                        </div>
+                        <p>Doux retour en enfance avec les plats les plus typiques de nos grands-mères! Ici la carte évoluera tous les mois pour le plus grand plaisir du chef Alex, de ses équipes mais surtout le vôtre !</p>
+                        <div class="separateur-space"></div>
+                        <h4>Horaires et jours d’ouvertures</h4>
+                        <p style="text-align: center;">La Cuisine est ouverte tous les jours, sauf le mardi toute la journée et le dimanche soir.</p>
+                        <div class="btn-space">
+                            <button onclick="showMenu('menu-cuisine')"><span>Découvrir la carte</span><img src="asset/svg/arrow-right.svg" alt="icone de fleches droite" loading="lazy"></button>
+                            <!-- Trigger/Open Modal -->
+                            <button id="cuisineBtn">Réserver</button>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article id="cave">
+                <div class="btn-back">
+                    <button onclick="showContent('main')"><img src="asset/svg/arrow-left.svg" alt="icone de fleches de retour" loading="lazy"><span>Retour</span></button>
+                </div>
+                <div class="descr">
+                    <div class="img-space">
+                        <img src="asset/img-webp/cave/cave-1.webp" alt="" loading="lazy">
+                        <img src="asset/img-webp/cave/cave-2.webp" alt="" loading="lazy">
+                    </div>
+                    <div class="txt-space">
+                        <h2>La Cave</h2>
+                        <h3>Dégustation pour les épicuriens.</h3>
+                        <div class="picto">
+                            <img src="asset/img-webp/pictogramme/euro2.webp" alt="gamme de prix de l'espace" loading="lazy">
+                            <img src="asset/img-webp/pictogramme/cotedeboeuf.webp" alt="icone de cote de boeuf" loading="lazy">
+                            <img src="asset/img-webp/pictogramme/vin.webp" alt="icone de vin" loading="lazy">
+                            <img src="asset/img-webp/pictogramme/cigare.webp" alt="icone de cigare" loading="lazy">
+                        </div>
+                        <p>Imaginez manger une bonne Côte de Boeuf, prendre une belle bouteille de Vin et finir son repas tranquillement avec un Digestif et un Cigare sur la terrasse. Boeuf Maturé, Entrecôte Wagyu, Jambon à la découpe, Poisson grillé, le lieu parfait pour les épicuriens.</p>
+                        <div class="separateur-space"></div>
+                        <h4>Horaires et jours d’ouvertures</h4>
+                        <p style="text-align: center;">La Cave est ouverte tous les jours,<br>sauf le mercredi toute la journée et le dimanche soir.</p>
+                        <div class="btn-space">
+                            <button onclick="showMenu('menu-cave')"><span>Découvrir la carte</span><img src="asset/svg/arrow-right.svg" alt="icone de fleches droite" loading="lazy"></button>
+                            <!-- Trigger/Open Modal -->
+                            <!--<button id="caveBtn">Réserver</button>-->
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article id="suite">
+                <div class="btn-back">
+                    <button onclick="showContent('main')"><img src="asset/svg/arrow-left.svg" alt="icone de fleches de retour" loading="lazy"><span>Retour</span></button>
+                </div>
+                <div class="descr">
+                    <div class="img-space">
+                        <img src="asset/img-webp/suite/suite-1.webp" alt="" loading="lazy">
+                        <img src="asset/img-webp/suite/suite-2.webp" alt="" loading="lazy">
+                    </div>
+                    <div class="txt-space">
+                        <h2>La Suite</h2>
+                        <h3>Privatisez La Suite pour votre anniversaire ou pour un séminaire professionnel.</h3>
+                        <div class="picto">
+                            <img src="asset/img-webp/pictogramme/euro3.webp" alt="gamme de prix de l'espace" loading="lazy">
+                            <img src="asset/img-webp/pictogramme/tchin.webp" alt="icone de verre de champagne" loading="lazy">
+                            <img src="asset/img-webp/pictogramme/tapis.webp" alt="icone de tapis rouge" loading="lazy">
+                            <img src="asset/img-webp/pictogramme/homard.webp" alt="icone de homard" loading="lazy">
+                        </div>
+                        <p>Espace privatif perché au plus haut point du 105. Vous jouirez de la plus jolie vue possible pour vos séminaires de travail, vos anniversaires en famille ou vos dîners entre amis ! Contactez vanessa@le-rouf.com pour plus d'informations.</p>
+                        <div class="separateur-space"></div>
+                        <h4>Horaires et jours d’ouvertures</h4>
+                        <p style="text-align: center;">La Suite est privatisable tous les jours.<br>Contactez vanessa@le-rouf.com pour plus d'informations.</p>
+                        <div class="btn-space">
+                            <!--<button onclick="showMenu('menu-suite')"><span>Découvrir la carte</span><img src="asset/svg/arrow-right.svg" alt="icone de fleches droite" loading="lazy"></button>-->
+                            <!-- Trigger/Open Modal -->
+                            <!--<button id="suiteBtn">Réserver</button>-->
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article id="salle">
+                <div class="btn-back">
+                    <button onclick="showContent('main')"><img src="asset/svg/arrow-left.svg" alt="icone de fleches de retour" loading="lazy"><span>Retour</span></button>
+                </div>
+                <div class="descr">
+                    <div class="img-space">
+                        <img src="asset/img-webp/salle/salle-1.webp" alt="" loading="lazy">
+                        <img src="asset/img-webp/salle/salle-2.webp" alt="" loading="lazy">
+                    </div>
+                    <div class="txt-space">
+                        <h2>La Salle a manger</h2>
+                        <h3>La Salle à manger vous propose un repas gastronomique avec un menu en plusieurs dégustations.</h3>
+                        <div class="picto">
+                            <img src="asset/img-webp/pictogramme/euro3.webp" alt="gamme de prix de l'espace" loading="lazy">
+                            <img src="asset/img-webp/pictogramme/plat-cloche.webp" alt="icone de cloche" loading="lazy">
+                            <img src="asset/img-webp/pictogramme/tchin.webp" alt="icone de verre de champagne" loading="lazy">
+                            <img src="asset/img-webp/pictogramme/etoile.webp" alt="icone de etoile" loading="lazy">
+                        </div>
+                        <p>Un dîner gastronomique avec vue Seine et Cathédrale, sympa non ? Profitez d’un repas d’exception avec un service soigné où les mises en scènes seront, en plus des mets délicieux, la marque de fabrique de cet espace.</p>
+                        <div class="separateur-space"></div>
+                        <h4>Horaires et jours d’ouvertures</h4>
+                        <p style="text-align: center;">La Salle à manger est ouverte tous les jours, sauf le dimanche soir.</p>
+                        <div class="btn-space">
+                            <button onclick="showMenu('menu-salle')"><span>Découvrir la carte</span><img src="asset/svg/arrow-right.svg" alt="icone de fleches droite" loading="lazy"></button>
+                            <!-- Trigger/Open Modal -->
+                            <!--<button id="salleBtn">Réserver</button>-->
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article id="salon">
+                <div class="btn-back">
+                    <button onclick="showContent('main')"><img src="asset/svg/arrow-left.svg" alt="icone de fleches de retour" loading="lazy"><span>Retour</span></button>
+                </div>
+                <div class="descr">
+                    <div class="img-space">
+                        <img src="asset/img-webp/salon/salon-1.webp" alt="" loading="lazy">
+                        <img src="asset/img-webp/salon/salon-2.webp" alt="" loading="lazy">
+                    </div>
+                    <div class="txt-space">
+                        <h2>Le Salon</h2>
+                        <h3>Tapas, Cocktail & Bistronomie.</h3>
+                        <div class="picto">
+                            <img src="asset/img-webp/pictogramme/euro1.webp" alt="gamme de prix de l'espace" loading="lazy">
+                            <img src="asset/img-webp/pictogramme/divan.webp" alt="icone de divan" loading="lazy">
+                            <img src="asset/img-webp/pictogramme/cocktail.webp" alt="icone de cocktail" loading="lazy">
+                            <img src="asset/img-webp/pictogramme/saucisson.webp" alt="icone de saucisson" loading="lazy">
+                        </div>
+                        <p>Profitez d'un moment de détente et de dégustation autour de tapas, de cocktails et d'une jolie carte bistronomique dans une ambiance de brasserie.</p>
+                        <div class="separateur-space"></div>
+                        <h4>Horaires et jours d’ouvertures</h4>
+                        <p style="text-align: center;">Le Salon et la Loggia
+                            <br>avec terrasse vue sur Seine
+                            <br>sont ouverts en continu :</p>
+                            <p style="text-align: center;">du lundi au dimanche de 12h à 23h.</p>
+                            <p style="text-align: center;">Une carte réduite est proposée de 14h à 19h.</p>
+                        <div class="btn-space">
+                            <button onclick="showMenu('menu-salon')"><span>Découvrir la carte</span><img src="asset/svg/arrow-right.svg" alt="icone de fleches droite" loading="lazy"></button>
+                            <!-- Trigger/Open Modal -->
+                            <button id="salonBtn">Réserver</button>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article id="loggia">
+                <div class="btn-back">
+                    <button onclick="showContent('main')"><img src="asset/svg/arrow-left.svg" alt="icone de fleches de retour" loading="lazy"><span>Retour</span></button>
+                </div>
+                <div class="descr">
+                    <div class="img-space">
+                        <img src="asset/img-webp/loggia/loggia-1.webp" alt="" loading="lazy">
+                        <img src="asset/img-webp/loggia/loggia-2.webp" alt="" loading="lazy">
+                    </div>
+                    <div class="txt-space">
+                        <h2>la Loggia</h2>
+                        <h3>Térrasse chaleureuse</h3>
+                        <div class="picto">
+                            <img src="asset/img-webp/pictogramme/euro1.webp" alt="gamme de prix de l'espace" loading="lazy">
+                            <img src="asset/img-webp/pictogramme/soleil.webp" alt="icone de soleil" loading="lazy">
+                            <img src="asset/img-webp/pictogramme/cocktail.webp" alt="icone de cocktail" loading="lazy">
+                            <img src="asset/img-webp/pictogramme/saucisson.webp" alt="icone de saucisson" loading="lazy">
+                        </div>
+                        <p>Ambiance et cartes similaires à celles du Salon, vous profiterez d’une jolie carte de cocktails et d’une bistronomie accessible à tous, le tout sur une terrasse chaleureuse avec vue sur Seine.
+                        </p>
+                        <div class="separateur-space"></div>
+                        <p>- Térrasse avec vue sur la Seine</p>
+                        <p>- Capacités de places assises</p>
+                        <div class="btn-space">
+                            <button onclick="showMenu('menu-salon')"><span>Découvrir la carte</span><img src="asset/svg/arrow-right.svg" alt="icone de fleches droite" loading="lazy"></button>
+                            <!-- Trigger/Open Modal -->
+                            <button id="loggiaBtn">Réserver</button>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article id="bar">
+                <div class="btn-back">
+                    <button onclick="showContent('main')"><img src="asset/svg/arrow-left.svg" alt="icone de fleches de retour" loading="lazy"><span>Retour</span></button>
+                </div>
+                <div class="descr">
+                    <div class="img-space">
+                        <img src="asset/img-webp/bar/bar-1.webp" alt="" loading="lazy">
+                        <img src="asset/img-webp/bar/bar-2.webp" alt="" loading="lazy">
+                    </div>
+                    <div class="txt-space">
+                        <h2>le Bar</h2>
+                        <h3>Zone d'accueil et de détente autour d'un verre ou d'un cocktail.</h3>
+                        <div class="picto">
+                            <img src="asset/img-webp/pictogramme/euro1.webp" alt="gamme de prix de l'espace" loading="lazy">
+                            <img src="asset/img-webp/picto-vin.webp" alt="icone de vin" loading="lazy">
+                            <img src="asset/img-webp/picto-jambon.webp" alt="icone de jambon" loading="lazy">
+                            <img src="asset/img-webp/picto-viande.webp" alt="icone de viande" loading="lazy">
+                        </div>
+                        <p>Cette zone sera à la fois une zone d'accueil, de détente autour d'un verre ou d'un cocktail, un instant de détente confortablement installé dans un fauteuil pour passer la soirée entre amis ou patienter le temps qu'une table du restaurant se libère.</p>
+                        <div class="separateur-space"></div>
+                        <p>- Térrasse avec vue sur la seine</p>
+                        <p>- Zone d'accueil</p>
+                        <div class="btn-space">
+                            <!--<button onclick="showMenu('menu-bar')"><span>Découvrir la carte</span><img src="asset/svg/arrow-right.svg" alt="icone de fleches droite" loading="lazy"></button>-->
+                            <!-- Trigger/Open Modal -->
+                            <!--<button id="barBtn">Réserver</button>-->
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article id="menu-jardin">
+                <div class="btn-back">
+                    <button onclick="showContent('jardin')"><img src="asset/svg/arrow-left.svg" alt="icone de fleches de retour" loading="lazy"><span>Retour</span></button>
+                    <!-- Trigger/Open Modal -->
+                    <button id="jardinBtn">Réserver</button>
+                </div>
+                <div class="descr">
+                    <div id="adobe-dc-view-jardin" style="height: 600px; width: 100%;"></div>
+                </div>
+            </article>
+            <article id="menu-cabinet">
+                <div class="btn-back">
+                    <button onclick="showContent('cabinet')"><img src="asset/svg/arrow-left.svg" alt="icone de fleches de retour" loading="lazy"><span>Retour</span></button>
+                </div>
+                <div class="descr">
+                    <div id="adobe-dc-view-cabinet" style="height: 600px; width: 100%;"></div>
+                </div>
+            </article>
+            <article id="menu-cuisine">
+                <div class="btn-back">
+                    <button onclick="showContent('cuisine')"><img src="asset/svg/arrow-left.svg" alt="icone de fleches de retour" loading="lazy"><span>Retour</span></button>
+                    <!-- Trigger/Open Modal -->
+                    <button id="cuisineBtn">Réserver</button>
+                </div>
+                <div class="descr">
+                    <div id="adobe-dc-view-cuisine" style="height: 600px; width: 100%;"></div>
+                </div>
+            </article>
+            <article id="menu-cave">
+                <div class="btn-back">
+                    <button onclick="showContent('cave')"><img src="asset/svg/arrow-left.svg" alt="icone de fleches de retour" loading="lazy"><span>Retour</span></button>
+                </div>
+                <div class="descr">
+                    <div id="adobe-dc-view-cave" style="height: 600px; width: 100%; animation: aparition 0.6s 0.3s ease-out forwards; opacity: 0;"></div>
+                </div>
+            </article>
+            <article id="menu-suite">
+                <div class="btn-back">
+                    <button onclick="showContent('suite')"><img src="asset/svg/arrow-left.svg" alt="icone de fleches de retour" loading="lazy"><span>Retour</span></button>
+                </div>
+                <div class="descr">
+                    <div id="adobe-dc-view-suite" style="height: 600px; width: 100%;"></div>
+                </div>
+            </article>
+            <article id="menu-salle">
+                <div class="btn-back">
+                    <button onclick="showContent('salle')"><img src="asset/svg/arrow-left.svg" alt="icone de fleches de retour" loading="lazy"><span>Retour</span></button>
+                </div>
+                <div class="descr">
+                    <div id="adobe-dc-view-salle" style="height: 600px; width: 100%;"></div>
+                </div>
+            </article>
+            <article id="menu-salon">
+                <div class="btn-back">
+                    <button onclick="showContent('salon')"><img src="asset/svg/arrow-left.svg" alt="icone de fleches de retour" loading="lazy"><span>Retour</span></button>
+                    <!-- Trigger/Open Modal -->
+                    <button id="salonBtn">Réserver</button>
+                </div>
+                <div class="descr">
+                    <div id="adobe-dc-view-salon" style="height: 600px; width: 100%;"></div>
+                </div>
+            </article>
+            <article id="menu-loggia">
+                <div class="btn-back">
+                    <button onclick="showContent('loggia')"><img src="asset/svg/arrow-left.svg" alt="icone de fleches de retour" loading="lazy"><span>Retour</span></button>
+                    <!-- Trigger/Open Modal -->
+                    <button id="loggiaBtn">Réserver</button>
+                </div>
+                <div class="descr">
+                    <div id="adobe-dc-view-patio" style="height: 600px; width: 100%;"></div>
+                </div>
+            </article>
+            <article id="menu-bar">
+                <div class="btn-back">
+                    <button onclick="showContent('bar')"><img src="asset/svg/arrow-left.svg" alt="icone de fleches de retour" loading="lazy"><span>Retour</span></button>
+                </div>
+                <div class="descr">
+                    <div id="adobe-dc-view-loggia" style="height: 600px; width: 100%;"></div>
+                </div>
+            </article>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="https://acrobatservices.adobe.com/view-sdk/viewer.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

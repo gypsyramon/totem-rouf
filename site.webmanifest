@@ -1,0 +1,26 @@
+{
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#333333",
+  "background_color": "#333333",
+  "display": "fullscreen",
+  "name": "Totem app Le Rouf",
+  "short_name": "Le Rouf",
+  "id": "LE_ROUF",
+  "description": "Cette application est une map interactive présentant le restaurant Le Rouf sur les Totems interactifs présent au rez-de-chaussée du restaurant, celui-ci se trouvant au 3ème étage du bâtiment 105 sur les quai de Rouen, au 105 allée François Miterrand",
+  "start_url": "https://totem.le-rouf.com",
+  "dir": "auto",
+  "lang": "fr",
+  "orientation": "portrait"
+}
+
