@@ -140,7 +140,7 @@ document.addEventListener("adobe_dc_view_sdk.ready", function() {
         adobeDCView.previewFile({
             content: { location: { url: pdf.url } },
             metaData: { fileName: pdf.fileName }
-        }, { embedMode: "IN_LINE", showDownloadPDF: false, showPrintPDF: false });
+        }, { embedMode: "SIZED_CONTAINER", showDownloadPDF: false, showPrintPDF: false });
     }
   }
 
