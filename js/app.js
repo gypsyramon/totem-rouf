@@ -136,7 +136,7 @@ document.addEventListener("adobe_dc_view_sdk.ready", function() {
   function initializePdfViewer(divId) {
     var pdf = pdfs.find(p => p.divId === divId);
     if (pdf) {
-        var adobeDCView = new AdobeDC.View({ clientId: "7e8d6681f51b4de6adcdc762688e54a5", divId: pdf.divId });
+        var adobeDCView = new AdobeDC.View({ clientId: "3423cb334c77406e91ebf5118d267c31", divId: pdf.divId });
         adobeDCView.previewFile({
             content: { location: { url: pdf.url } },
             metaData: { fileName: pdf.fileName }
