@@ -99,7 +99,7 @@ document.addEventListener("adobe_dc_view_sdk.ready", function() {
       { url: "../asset/pdf/Carte-Cave-Juin-2024.pdf", fileName: "Cave", divId: "adobe-dc-view-cave" },
       { url: "../asset/pdf/Carte-Cuisine-Juin-2024.pdf", fileName: "Cuisine", divId: "adobe-dc-view-cuisine" },
       { url: "../asset/pdf/Carte-Jardin-Juin-2024.pdf", fileName: "Jardin", divId: "adobe-dc-view-jardin" },
-      { url: "../asset/pdf/Carte-Salon-Juin-2024.pdf", fileName: "Salon", divId: "adobe-dc-view-salon" },
+      { url: "https://le-rouf.com/wp-content/uploads/Carte-Salon.pdf", fileName: "Salon", divId: "adobe-dc-view-salon" },
       { url: "../asset/pdf/Carte-Salle-a-manger-Juin-2024.pdf", fileName: "Salle", divId: "adobe-dc-view-salle" },
   ];
   // eviter que le script adobe se charge des le début pour chauque pdf
