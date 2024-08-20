@@ -99,7 +99,7 @@ function resetTouchIcoTimer() {
 //    }, 180000);
 //}
 
-//fonction pour afficher les menus pdf
+/* //fonction pour afficher les menus pdf
 document.addEventListener("adobe_dc_view_sdk.ready", function() {
   var pdfs = [
       { url: "https://le-rouf.com/wp-content/uploads/Carte-Cave.pdf", fileName: "Cave", divId: "adobe-dc-view-cave" },
@@ -168,7 +168,7 @@ document.addEventListener("adobe_dc_view_sdk.ready", function() {
         document.getElementById('menu-' + section).style.display = (content === section) ? 'block' : 'none';
     });
   }
-});
+}); */
 
 // Fonction ouverture modal
 function openModal(modalId) {
