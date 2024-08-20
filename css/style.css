@@ -110,6 +110,7 @@ button img {
     opacity:0;
     transform: translateY(-30px);
     animation: aparition 0.6s 0.3s ease-out forwards, xpanse-border 2s ease-out infinite;
+    z-index: 2;
 }
 #touchIco img{
     filter: invert(1);
@@ -223,14 +224,13 @@ polygon {
     filter: invert(0) hue-rotate(183deg);
     background: url(../asset/svg/LE_ROUF_embleme_white.svg) no-repeat bottom left;
 }
-#main h2 {
-    padding-bottom: 10px;
-}
 #main span {
     line-height: 48px;
 }
 #main p {
     padding: 16px 0 16px;
+    font-size: 24px;
+    line-height: 28px;
 }
 #main button{
     margin: 30px auto 0;
@@ -365,7 +365,7 @@ polygon {
     text-align: center;
   }
   .modal-content img {
-    width: 60px;
+    width: 98px;
   }
   
   /* The Close Button */

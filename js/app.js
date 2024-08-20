@@ -168,12 +168,20 @@ document.addEventListener("adobe_dc_view_sdk.ready", function() {
 function openModal(modalId) {
   var modal = document.getElementById(modalId);
   modal.style.display = "block";
+  autoCloseModal(modalId, 15000);
 }
 
 // Fonction fermeture modal
 function closeModal(modalId) {
   var modal = document.getElementById(modalId);
   modal.style.display = "none";
+}
+
+// Fonction pour fermer la modal automatiquement après un délai
+function autoCloseModal(modalId, delay) {
+  setTimeout(function() {
+    closeModal(modalId);
+  }, delay);
 }
 
 // Sel all bouton en fonction de l'ID
