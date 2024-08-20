@@ -63,7 +63,13 @@ let hideTouchIcoTimer;
 
 function displayTouchIco() {
   const touchico = document.getElementById("touchIco");
-  touchico.style.display = 'none';
+  touchico.classList.remove('show')
+  touchico.classList.add('hide'); // Ajouter la classe pour l'animation de disparition
+  setTimeout(() => {
+    touchico.style.display = 'none';
+    touchico.classList.remove('hide'); // Enlever la classe pour être prêt à la réafficher
+    touchico.classList.add('show')
+  }, 600); // Correspond à la durée de l'animation (0.6s)
   startTouchIcoTimer(); // Démarrer le timer pour réafficher l'élément
 }
 
@@ -174,7 +180,13 @@ function openModal(modalId) {
 // Fonction fermeture modal
 function closeModal(modalId) {
   var modal = document.getElementById(modalId);
-  modal.style.display = "none";
+  modal.classList.remove('show-modal')
+  modal.classList.add('hide');
+  setTimeout(() => {
+    modal.style.display = "none";
+    modal.classList.remove('hide');
+    modal.classList.add('show-modal');
+  }, 600);
 }
 
 // Fonction pour fermer la modal automatiquement après un délai

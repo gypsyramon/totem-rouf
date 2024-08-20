@@ -109,7 +109,6 @@ button img {
     left: 23vw;
     opacity:0;
     transform: translateY(-30px);
-    animation: aparition 0.6s 0.3s ease-out forwards, xpanse-border 2s ease-out infinite;
     z-index: 2;
 }
 #touchIco img{
@@ -319,6 +318,29 @@ polygon {
         filter: blur(0);
     }
 }
+
+.show {
+    animation: aparition 0.6s 0.3s ease-out forwards, xpanse-border 2s ease-out infinite;
+}
+.show-modal {
+    animation: aparition 0.6s 0.3s ease-out forwards;
+}
+/* Animation de disparition */
+@keyframes disparition {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+}
+
+.hide {
+    animation: disparition 0.6s ease-out forwards;
+}
+
 /* animation du bouton d'invitation a interagir avec la carte */
 @keyframes xpanse-border {
     0%{
@@ -347,7 +369,6 @@ polygon {
     padding: 12px;
     opacity:0;
     transform: translateY(-30px);
-    animation: aparition 0.6s 0.3s ease-out forwards;
   }
   
   /* Modal Content/Box */
