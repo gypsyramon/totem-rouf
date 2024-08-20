@@ -106,7 +106,7 @@ button img {
     color: #fff;
     text-align: center;
     top: 65vw;
-    left: 23vw;
+    left: 25vw;
     opacity:0;
     transform: translateY(-30px);
     z-index: 2;
@@ -360,7 +360,7 @@ polygon {
     position: fixed;
     z-index: 1;
     left: 0;
-    top: 13%;
+    top: 14%;
     width: 100%;
     height: 100%;
     overflow: auto; /* Enable scroll if needed */
