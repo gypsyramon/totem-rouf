@@ -212,6 +212,7 @@ polygon {
 }
 
 #container-2 #main {
+    margin-top: 80px;
     height: 100%;
     display: block;
     align-content: center;
