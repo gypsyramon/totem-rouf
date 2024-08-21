@@ -52,6 +52,7 @@ li {
     padding: 0 0 8px 16px;
 }
 button {
+    width: fit-content;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -66,6 +67,11 @@ button {
 }
 button img {
     width: 17px;
+}
+.btn-space {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
 }
 .btn-space button img {
     filter: invert(1);
