@@ -344,7 +344,7 @@ polygon {
 .show {
     animation: aparition 0.6s 0.3s ease-out forwards, xpanse-border 2s ease-out infinite;
 }
-.show-modal {
+.show-modal, .show-full {
     animation: aparition 0.6s 0.3s ease-out forwards;
 }
 /* Animation de disparition */
