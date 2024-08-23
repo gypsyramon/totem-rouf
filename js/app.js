@@ -91,14 +91,16 @@ function resetTouchIcoTimer() {
 // fonction du slider et des img correspondantes
 const images = [
   'url("../asset/img-webp/bg-totem/1.webp")',
-  'url("https://images.pexels.com/photos/21261/pexels-photo.jpg")',
-  'url("https://images.pexels.com/photos/567973/pexels-photo-567973.jpeg")',
-  'url("https://images.pexels.com/photos/776653/pexels-photo-776653.jpeg")',
-  'url("https://images.pexels.com/photos/54630/japanese-cherry-trees-flowers-spring-japanese-flowering-cherry-54630.jpeg")',
-  'url("https://images.pexels.com/photos/131046/pexels-photo-131046.jpeg")',
-  'url("https://images.pexels.com/photos/302515/pexels-photo-302515.jpeg")',
-  'url("https://images.pexels.com/photos/301682/pexels-photo-301682.jpeg")',
-  'url("https://images.pexels.com/photos/933054/pexels-photo-933054.jpeg")',
+  'url("../asset/img-webp/bg-totem/2.webp")',
+  'url("../asset/img-webp/bg-totem/3.webp")',
+  'url("../asset/img-webp/bg-totem/4.webp")',
+  'url("../asset/img-webp/bg-totem/5.webp")',
+  'url("../asset/img-webp/bg-totem/6.webp")',
+  'url("../asset/img-webp/bg-totem/7.webp")',
+  'url("../asset/img-webp/bg-totem/8.webp")',
+  'url("../asset/img-webp/bg-totem/9.webp")',
+  'url("../asset/img-webp/bg-totem/10.webp")',
+  'url("../asset/img-webp/bg-totem/11.webp")',
 ];
 
 let currentIndex = 0;
