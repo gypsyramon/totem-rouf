@@ -63,12 +63,12 @@ let hideTouchIcoTimer;
 
 function displayTouchIco() {
   const touchico = document.getElementById("background-slider");
-  touchico.classList.remove('show')
+  // touchico.classList.remove('show')
   touchico.classList.add('hide'); // Ajouter la classe pour l'animation de disparition
   setTimeout(() => {
     touchico.style.display = 'none';
     touchico.classList.remove('hide'); // Enlever la classe pour être prêt à la réafficher
-    touchico.classList.add('show')
+    // touchico.classList.add('show')
   }, 600); // Correspond à la durée de l'animation (0.6s)
   startTouchIcoTimer(); // Démarrer le timer pour réafficher l'élément
 }
