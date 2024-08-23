@@ -90,7 +90,7 @@ function resetTouchIcoTimer() {
 }
 // fonction du slider et des img correspondantes
 const images = [
-  'url("file:///storage/emulated/0/Pictures/bg/1.webp")',
+  'url("../asset/img-webp/bg-totem/1.webp")',
   'url("https://images.pexels.com/photos/21261/pexels-photo.jpg")',
   'url("https://images.pexels.com/photos/567973/pexels-photo-567973.jpeg")',
   'url("https://images.pexels.com/photos/776653/pexels-photo-776653.jpeg")',
