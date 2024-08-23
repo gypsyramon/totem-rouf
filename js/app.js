@@ -62,7 +62,7 @@ function showMenu(contentId){
 let hideTouchIcoTimer;
 
 function displayTouchIco() {
-  const touchico = document.getElementById("touchIco");
+  const touchico = document.getElementById("background-slider");
   touchico.classList.remove('show')
   touchico.classList.add('hide'); // Ajouter la classe pour l'animation de disparition
   setTimeout(() => {
@@ -76,7 +76,7 @@ function displayTouchIco() {
 function startTouchIcoTimer() {
   clearTimeout(hideTouchIcoTimer); // Réinitialiser le timer
   hideTouchIcoTimer = setTimeout(() => {
-    const touchico = document.getElementById("touchIco");
+    const touchico = document.getElementById("background-slider");
     touchico.style.display = ''; // Réafficher l'élément
   }, 15000);
 }
@@ -88,6 +88,28 @@ function resetTouchIcoTimer() {
   clearTimeout(hideTouchIcoTimer); // Réinitialiser le timer à chaque mouvement
   startTouchIcoTimer(); // Redémarrer le timer
 }
+// fonction du slider et des img correspondantes
+const images = [
+  'url("https://images.pexels.com/photos/758733/pexels-photo-758733.jpeg")',
+  'url("https://images.pexels.com/photos/21261/pexels-photo.jpg")',
+  'url("https://images.pexels.com/photos/567973/pexels-photo-567973.jpeg")',
+  'url("https://images.pexels.com/photos/776653/pexels-photo-776653.jpeg")',
+  'url("https://images.pexels.com/photos/54630/japanese-cherry-trees-flowers-spring-japanese-flowering-cherry-54630.jpeg")',
+  'url("https://images.pexels.com/photos/131046/pexels-photo-131046.jpeg")',
+  'url("https://images.pexels.com/photos/302515/pexels-photo-302515.jpeg")',
+  'url("https://images.pexels.com/photos/301682/pexels-photo-301682.jpeg")',
+  'url("https://images.pexels.com/photos/933054/pexels-photo-933054.jpeg")',
+];
+
+let currentIndex = 0;
+const slider = document.getElementById('background-slider');
+
+function changeBackgroundImage() {
+  slider.style.backgroundImage = images[currentIndex];
+  currentIndex = (currentIndex + 1) % images.length;
+}
+
+setInterval(changeBackgroundImage, 5000); // Change every 5 seconds
 
 // Timer de réinitialisation de la page
 //let pageResetTimer;
